@@ -71,7 +71,7 @@ df_grouped = df_grouped.rename(columns={'Month': 'Count'})
 df_grouped = df_grouped.reset_index()
 
 # --- PLOT BAR CHART
-st.subheader(":bar_chart: Visual Insights :bar_chart:")
+st.subheader(":bar_chart: Visual Insights - Overall status of CRs :bar_chart:")
 bar_chart = px.bar(df_grouped,
                    x='Status',
                    y='Count',
@@ -104,7 +104,7 @@ pivot_table = df_new.pivot_table(index='Month', columns='Status', aggfunc='count
 pivot_table = pivot_table.iloc[:, :6]
 
 # --- DISPLAY Dataframe
-st.subheader(":brain: Deep Insights :brain:")
+st.subheader(":brain: Deep Insights - Overall status of CRs :brain:")
 st.write(df[mask])
 
 # Display the pivot table
