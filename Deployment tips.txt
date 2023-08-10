@@ -1,0 +1,6 @@
+To deploy changes use below set of cmds in sequence:
+
+1. git add .
+2. git commit -m "Images" On branch master
+3. git pull --rebase origin master          ---> master == branch name in GIT
+4. git push -u origin master
